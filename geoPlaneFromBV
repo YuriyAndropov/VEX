@@ -1,0 +1,15 @@
+vector BVMin = v@EntityBVMin ;
+vector BVMax = v@EntityBVMax;
+
+int pnt0 = addpoint(0,set(BVMin.x, @P.y, BVMin.z));
+int pnt1 = addpoint(0,set(BVMin.x, @P.y, BVMax.z));
+int pnt2 = addpoint(0,set(BVMax.x, @P.y, BVMax.z));
+int pnt3 = addpoint(0,set(BVMax.x, @P.y, BVMin.z));
+
+
+int lowPlane = addprim(0,"poly");
+
+addvertex(0,lowPlane,pnt0);
+addvertex(0,lowPlane,pnt1);
+addvertex(0,lowPlane,pnt2);
+addvertex(0,lowPlane,pnt3);
