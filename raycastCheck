@@ -1,3 +1,4 @@
+///
 //ray - ray distance and lenght. start - starting position for raycast
 vector ray = {0,0,0};
 vector start = v@P + {0,0,0};
