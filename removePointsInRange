@@ -6,6 +6,8 @@ foreach(int i; allPoints)
         if(find(leave,i)<0 && find(delete,i)<0)
         {
             push(leave,i);
+            //be aware of pcfind last number.It's max num of points.
+            //if curve resample is something ridiculous like 0,1, there will be a problem
             int inRange[] = pcfind(0, 'P', point(0,'P',i), ch('radius'),10);
             foreach(int r; inRange)
             {
